@@ -1,0 +1,5 @@
+var o;(function(t){t[t.Start=0]="Start",t[t.End=1]="End";})(o||(o={}));let a;function attachDispatcher(t){a=t;}const e=globalThis.performance,s=typeof e!="undefined"&&typeof e.mark=="function"&&typeof e.clearMarks=="function"&&typeof e.measure=="function"&&typeof e.clearMeasures=="function";function logOperationStart({id:t,specifier:n}){a?a({id:t,phase:o.Start,specifier:n}):s&&e.mark(t+(n?`.${n}`:""));}function logOperationEnd({id:t,specifier:n}){if(a)a({id:t,phase:o.End,specifier:n});else if(s){const r=n?`.${n}`:"",f=t+r,c=`${t}.duration${r}`;e.measure(c,f),e.clearMarks(f),e.clearMeasures(c);}}
+
+export { attachDispatcher, logOperationEnd, logOperationStart };
+
+//# sourceMappingURL=/1/sourcemaps/bundle/esm/l/en-US/bi/0/module/mi/lwr%2Fprofiler%2Fv%2F0_7_2/s/2bff750b844b5cc843e4a8ce6d91c4ed870ffcae/bundle_lwr_profiler.js
